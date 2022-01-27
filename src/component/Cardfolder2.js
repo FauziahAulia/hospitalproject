@@ -6,39 +6,49 @@ import Typography from "@mui/material/Typography";
 import FolderIcon from "@mui/icons-material/Folder";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 
-export default function MediaControlCard() {
+export default function MediaControlCard(props) {
   return (
     <Card
       sx={{
         display: "flex",
-        width: "21.438rem",
+        width: "303.01px",
+        height: "65.68px",
         borderRadius: "0.429rem",
-        bgcolor: "rgba(61, 90, 128, 0.5)",
+        bgcolor: "rgba(72, 181, 39, 0.5)",
         boxShadow: " 0px 2px 4px grey",
+        ml: "1.5rem",
       }}
       style={{ padding: "1.609rem 1.609rem" }}
     >
-      <Box sx={{ pt: 1, pl: 1, pb: 1 }}>
-        <FolderIcon
-          fontSize="large"
-          sx={{
-            color: "#3D5A80",
-            width: "90px",
-            height: "63.2px",
-            left: "25.74px",
-            top: "25.74px",
-            borderRadius: "0.625rem",
-            align: "center",
-          }}
-        />
+      <Box sx={{ mt: -2, ml: -2 }}>
+        <svg width="6em" height="6em">
+          {/* Atur gradient */}
+          <linearGradient
+            id="green-gradient"
+            x1="40%"
+            y1="100%"
+            x2="40%"
+            y2="40%"
+          >
+            <stop stopColor="#36871D" offset="40%" />
+            <stop stopColor="#48B527" offset="100%" />
+          </linearGradient>
+          {/* Icon */}
+          <FolderIcon style={{ fill: "url(#green-gradient)" }} />
+        </svg>
       </Box>
       <Box sx={{ display: "flex", flexDirection: "column" }}>
-        <CardContent sx={{ mt: 5 }}>
+        <CardContent sx={{ mt: 3 }}>
           <Typography
             variant="h6"
             component="div"
-            sx={{ fontSize: "20.59px", color: "000" }}
-            style={{ fontWeight: "bold", lineHeight: "1.188rem" }}
+            sx={{
+              fontSize: "20.59px",
+              color: "#000",
+              fontFamily: "poppins",
+              mt: -5,
+            }}
+            style={{ fontWeight: "600" }}
           >
             Current Patient
           </Typography>
@@ -47,11 +57,12 @@ export default function MediaControlCard() {
             sx={{
               fontSize: "15.44px",
               color: "#fff",
-              fontWeight: "bold",
-              pt: 3,
+              fontFamily: "poppins",
+              fontWeight: "600",
+              pt: 1,
             }}
           >
-            5 patient
+            5 Patient
           </Typography>
           <Typography
             sx={{
@@ -59,17 +70,16 @@ export default function MediaControlCard() {
               alignItems: "center",
               pl: 22,
               fontSize: "15.44px",
-              color: "#3D5A80",
+              fontFamily: "poppins",
+              color: "#36871D",
               fontWeight: "bold",
-              pt: -90,
+              ml: -2,
+              mt: -3.6,
             }}
           >
             5%
+            <ArrowDropUpIcon fontSize="large" sx={{ color: "#36871D" }} />
           </Typography>
-          <h3>Arrow Up</h3>
-          <ArrowDropUpIcon
-            sx={{ color: "#000000", width: "10rem", height: "10rem" }}
-          />
         </CardContent>
       </Box>
     </Card>

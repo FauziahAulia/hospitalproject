@@ -6,7 +6,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import DetailButton from "./Button";
 import jamesrobinson from "../img/jamesrobinson.jpeg";
-import Button from "@mui/material/Button";
 import WarningButton from "./WarningButton";
 
 export default function MediaControlCard() {
