@@ -7,11 +7,12 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import HistoryIcon from "@mui/icons-material/History";
 import PieChartIcon from "@mui/icons-material/PieChart";
+import logo from "../img/logo.png";
 
 export default function BasicList() {
   return (
-    <Box sx={{ width: "100%", maxWidth: 360 }}>
-      <List>
+    <Box sx={{ width: "100%", maxWidth: 360 }} image={logo}>
+      <List image={logo}>
         <ListItem disablePadding>
           <ListItemButton
             sx={{ bgcolor: "rgba(61, 90, 128, 0.2)" }}
@@ -24,8 +25,8 @@ export default function BasicList() {
               <PieChartIcon
                 sx={{
                   color: "#3D5A80",
-                  width: "11.88px",
-                  height: "16.62px",
+                  width: "13.88px",
+                  height: "18.62px",
                   top: "0.106rem",
                 }}
               />
@@ -55,8 +56,8 @@ export default function BasicList() {
               <HistoryIcon
                 sx={{
                   color: "#000",
-                  width: "11.88px",
-                  height: "16.62px",
+                  width: "13.88px",
+                  height: "18n.62px",
                   top: "0.106rem",
                 }}
               />

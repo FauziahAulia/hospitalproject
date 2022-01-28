@@ -50,7 +50,7 @@ export default function MediaControlCard(props) {
             }}
             style={{ fontWeight: "600" }}
           >
-            Current Patient
+            Completed Patient
           </Typography>
           <Typography
             variant="body2"
